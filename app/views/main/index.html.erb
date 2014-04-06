@@ -1,0 +1,40 @@
+<div id="wrapper">
+  <header>
+    <div class="logo-wrapper">
+      <a class="logo" href="#">Logo</a>
+    </div>
+  </header>
+  <section id="intro">
+    <div class="block-centered">
+      <h1>Earn money with your Instagram profile</h1>
+      <p>We're creating a marketplace to connect brands and popular users on Instagram. Find brands your interested in, make posts with a product, and have money sent directly to your bank account.</p>
+      <div id="form">
+        <%= form_for :entry, url: entries_path, :html => {:id => 'email_form'} do |f| %>
+          <%= f.text_field :email, :placeholder => "Email", :maxlength => "255", :autocomplete => "off", :class => "email" %>
+          <%= f.submit "Send", :class => "btn btn-lg cta" %>
+        <% end %>
+      </div>
+      <i>Don't worry, we hate spam too. Your email will only be used for launch announcements.</i>
+    </div>
+    <div id="overlay"></div>
+  </section>
+</div>
+
+<script type="text/javascript">
+
+$('#email_form').submit(function (event) {
+  event.preventDefault();
+  var $form = $(this);
+  var term = $form.find("input.email").val();
+  var url = $form.attr('action');
+
+  $.ajax({
+    url: "/entries",
+    type: "POST",
+    data: {entry: {email: term }},
+    success: $('#form').html("<p>Thanks! We'll let you know as soon as we've launched!")
+  });
+
+});
+
+</script>
