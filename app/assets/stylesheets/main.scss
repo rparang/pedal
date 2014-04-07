@@ -107,6 +107,11 @@ overflow: scroll;
 .btn {
   display: inline-block;
   -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.btn.cta:hover {
+  background: darken(#00A8B2, 8%);
 }
 
 .btn-lg {
