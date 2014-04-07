@@ -12,6 +12,10 @@ section h1 {
   color: white;
 }
 
+a {
+  color: white;
+}
+
 p {
   font-weight: 300;
   font-size: 18px;
@@ -33,6 +37,15 @@ i {
   margin-top: 13px;
   display: block;
   font-size: 11px;
+}
+
+.logo-wrapper {
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 #intro {

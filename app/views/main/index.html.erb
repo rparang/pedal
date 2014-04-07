@@ -1,13 +1,13 @@
 <div id="wrapper">
-  <header>
-    <div class="logo-wrapper">
-      <a class="logo" href="#">Logo</a>
-    </div>
-  </header>
   <section id="intro">
+    <header>
+      <div class="logo-wrapper">
+        <img src="/assets/logo.png" /><a class="logo" href="#">Pedal</a>
+      </div>
+    </header>
     <div class="block-centered">
       <h1>Earn money with your Instagram profile</h1>
-      <p>We're creating a marketplace to connect brands and popular users on Instagram. Find brands you like, make posts with a product, and have money sent directly to your bank account.</p>
+      <p>We're creating a marketplace to connect brands and popular users on Instagram. Find brands you like, make posts with a product, and have money sent directly to your bank account. We'll tell you when we launch:</p>
       <div id="form">
         <%= form_for :entry, url: entries_path, :html => {:id => 'email_form'} do |f| %>
           <%= f.text_field :email, :placeholder => "Email", :maxlength => "255", :autocomplete => "off", :class => "email" %>
