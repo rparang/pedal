@@ -32,7 +32,7 @@ $('#email_form').submit(function (event) {
     url: "/entries",
     type: "POST",
     data: {entry: {email: term }},
-    success: $('#form').html("<p>Thanks! We'll let you know as soon as we've launched!")
+    success: $('#form').html("<p>Thanks! We'll let you know as soon as we've launched.</p>")
   });
 
 });
