@@ -81,7 +81,7 @@ overflow: scroll;
 
 .btn {
   display: inline-block;
- 
+  -webkit-appearance: none;
 }
 
 .btn-lg {
@@ -115,6 +115,7 @@ overflow: scroll;
 @media screen and (max-width: 650px) {
   .email {
     width: 200px;
+    margin-bottom: 8px;
   }
   .btn {
     width: 238px;
@@ -131,6 +132,7 @@ overflow: scroll;
 @media screen and (max-width: 500px) {
   .email {
     width: 200px;
+    margin-bottom: 8px;
   }
   .btn {
     width: 238px;
